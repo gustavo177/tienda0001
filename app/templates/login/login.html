@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <!-- Fuente Playfair Display desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+
+        body{
+            margin: 0px;
+        }
+
+        .contenedor{
+            display: flex;
+            position: relative;
+            background-color: #28a745;
+            height: 100vh;
+            width: 100%;
+        }
+        .caja1{
+            background-color: #BE6642;
+            height: 100%;
+            width: 50%;
+        }
+        .caja2{
+            background-color: #f5e6d3;
+            height: 100%;
+            width: 50%;
+        }
+
+        .caja2 img{
+            padding-left: 182px;
+        }
+
+        .caja3{
+            position: absolute;
+            left: 25%;
+            /* background-color: rgb(10, 0, 199); */
+            height: 50%;
+            width: 50%;
+        }
+
+        .caja4{
+            position: absolute;
+            right: 53%;
+            /* background-color: rgb(10, 0, 199); */
+            width: 50%;
+        }
+
+        .caja5{
+            position: absolute;
+            top: 58%;
+            right: 74%;
+            /* background-color: rgb(10, 0, 199); */
+            width: 22%;
+            height: 36%;
+        }
+
+
+        .logo{
+            position: absolute;
+            top: 34%;
+            right: 30%;
+            /* background-color: rgb(10, 0, 199); */
+            width: 50%;
+        }
+
+        /* Texto MACA */
+        .logo-texto {
+            position: absolute;
+            font-family: 'Playfair Display', serif;
+            font-size: 35px;
+            font-weight: bold;
+            color: rgb(255, 255, 255); /* Texto blanco */
+            text-transform: uppercase; /* Convertir a mayúsculas */
+            letter-spacing: 2px; /* Espaciado entre letras */
+        }
+
+
+        .caja{
+            display:grid;
+            height:100vh;
+            justify-content: center;
+            align-items: center;
+            /* margin: 20px; */
+            /* background-color: #28a745; */
+        }
+        .contenido {
+            padding: 40px 30px 30px 30px;
+            border: solid #ffffff;
+            border-radius: 25px; /* Bordes redondeados */
+            background-color: #ffffff;
+            /* width: 440px; */
+            width: 353px;
+            height: auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra en los lados */
+            position: relative; /* Necesario para el pseudo-elemento */
+            border: 0px;
+        }
+
+        /* Efecto de borde superior */
+        .contenido::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 27px; /* Ajusta el grosor del borde superior */
+            border-radius: 25px 25px 0 0; /* Se ajusta a los bordes redondeados */
+            z-index: 0; /* Coloca el efecto detrás del contenido */
+            border-top: 4px solid rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-top: 0px;
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: bold;
+            color: #222; /* Negro suave */
+        }
+
+        h2{
+            margin-bottom: 0px;
+        }
+
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            color: #444; /* Gris oscuro */
+        }
+
+        a {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: #b25a3c; /* Color anaranjado */
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #922d1e; /* Color más oscuro al pasar el mouse */
+        }
+
+        input {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            color: #666; /* Gris medio */
+            border: 1px solid #ddd;
+            padding: 12px;
+            border-radius: 8px;
+            width: 93%;
+            margin-top: 8px;
+            margin-bottom:25px;
+        }
+
+        input::placeholder {
+            color: #bbb; /* Color más claro para el placeholder */
+        }
+
+        button{
+            height: 42px;
+            width: 100%;
+            border: 1px solid #c06444;
+            border-radius: 8px;
+            background-color: #c06444;
+            color: white;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .imagen img {
+            height: 150px;
+            width: 150px;
+            display: block;
+            margin: 0 auto; /* Centra horizontalmente */
+        }
+
+        .caja4 img{
+            height: 150px;
+            width: 200px;
+        }
+
+        .caja5 h1{
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: white;
+            line-height: 1.0;
+
+        }
+        .caja5 p{
+            font-family: 'Poppins', sans-serif;
+            font-size: 26px;
+            font-weight: 400;
+            line-height: 1.0;
+            color: white;
+        }
+
+        @media (max-width: 1200px) { /* Se oculta en pantallas menores a 768px */
+            .caja4 {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="caja1">
+            
+        </div>
+        <div class="caja2">
+            <img src="https://s3-alpha-sig.figma.com/img/a617/bc45/f6eed16e06555c2654e94a09f67e395a?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=BMKpzKTdJxsBiD1JJn~6VsB6YRlqXHtWor7KMTtl0S4tHyWnj3vdLwKT5cBG6-pifQ4TG-UqhngrxX2vrcHh7kSI9skqY9KU86ZkKOP0Ph5GWx3bOwO0ArzLKojokUR4ka6SXmsQVERf5-yuQctNW~WzOSN1UycomJHxr32EqTtY3-AtiScQRC~nlwAqH6~3tFVGgOB~nOsKAdr5JHtDwHeCYdqr85BuOk3B6PMk2Ct-sEq~KiDwdUdGlqoURQP17h0Jp3DXNciyTPW2sU77AF8tiqekn7Co99hYc--mqTej61lhskAUg-0vXcDaKGp9EpZmHbevHfGkGIdz6loy-A__" alt="">
+        </div>
+        <div class="caja3">
+            <div class="caja">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="contenido">
+
+                        <h2>Bienvenido</h2>
+                        <h1>Inicia Sesión</h1>
+
+                        {% if mensaje_error %}
+                            <p style="color: red; width: 100%; text-align: center;">{{ mensaje_error }}</p> <!-- Muestra el mensaje en español -->
+                        {% endif %}
+                        <label for="username">Nombre de usuario:</label>
+                        <br>
+                        <input type="text" id="username" name="username" required>
+                        <br>
+                        <label for="password">Contraseña:</label>
+                        <br>
+                        <input type="password" id="password" name="password" required>
+                        <br>
+                        <button type="submit">Iniciar sesión</button>
+                    
+                        <div class="imagen">
+                            <img src="https://s3-alpha-sig.figma.com/img/66d5/70b3/9c6441c0a05bd78920817a27b7be7b9a?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=pHAI99XNF2o-YJrrLehVY9-pa2Y01SogUBW4DGXPmRx1hfKeebF~N6HqPLvAiETs8GduWcNCaDcfLIPeNqxNkJetgJzmg6hCyu0TgMS~ARNAfDroYcmf~CUbTLSGMS0geq98LKIzo39limyURPgQeKoU8nc~lIF7RckgKT9xb2SBeCLExKRcQ5rHSmQ6J7A9aj7cQA37pjPSkBhq5o85VLq9TNeNu420HnPZqA6W4llIt4Ij51kD2eWCFXJyt8FN3~PyJ9fTHfHUrL4AiCaan~v7Km2sfLju1ybsNF1l2ws7Y0BpQnuezsIKA35~CUdqfBluxU9CAOE0~6dFyjBdGA__" alt="">
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="caja4">
+            <img src="https://s3-alpha-sig.figma.com/img/9e76/71f8/7575b88ae033c16737966d300b03829d?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=LZ0wLLEAEA6fYtAlLB0HRWoQjAAOo6VeuVIqrIHvPGS83iEHP6~U9XKSwFmirxUruPohGeH3wuJEpP2Qa92NeyWWTocc2sg7KTP3aDBquVR3FdS75fkR9P3KBWnoBwn6qlgII9GbQOiJrLDlLEX15ZBxhdCg34pQqs-e7~njfJDbV3fs5UDgBE0HuzThysTACbiG0gpcEdiY52gnbx7Sbo1KB~-x2mcGT5LF3jIMHKlN49SgKq3Cgr24h26cyd-gSkPIfN0XZxFjKk9YlMfUkOFOK4DEBbxCMYYQHqUeik~OiGv92oM3aO-DiA0eepD5GyhIawRAmYKsUYCCzNwJiQ__" alt="">
+            <div class="logo">
+                <h1 class="logo-texto ">MACA</h1>
+            </div>
+        </div>
+
+        <div class="caja5">
+            <h1>Inicia Sesión <br> En Maca</h1>
+            <p>Y Regresa a tu espacio de bienestar natural.</p>
+        </div>
+
+       
+    </div>
+
+
+    
+    
+</body>
+</html>

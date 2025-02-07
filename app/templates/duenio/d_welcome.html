@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bienvenido Dueño</h1>
+    <!-- Formulario para cerrar sesión -->
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %} <!-- Token CSRF para seguridad -->
+        <button class="logout" type="submit">Logout</button> <!-- Botón para cerrar sesión -->
+    </form>
+
+</body>
+</html>
